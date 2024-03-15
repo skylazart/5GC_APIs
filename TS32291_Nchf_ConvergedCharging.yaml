@@ -839,12 +839,30 @@ components:
             - ABORT_CHARGING
         - type: string
     NodeFunctionality:
-      anyOf:
+      allOf:
         - type: string
           enum:
             - AMF
             - SMF
+            - SMS # Included for backwards compatibility, shall not be used
             - SMSF
+            - PGW_C_SMF
+            - NEFF # Included for backwards compatibility, shall not be used
+            - SGW
+            - I_SMF
+            - ePDG
+            - CEF
+            - NEF
+            - MnS_Producer
+            - SGSN
+            - V_SMF
+            - 5G_DDNMF
+            - IMS_Node
+            - MMS_Node
+            - EES
+            - PCF
+            - UDM
+            - UPF
         - type: string
     ChargingCharacteristicsSelectionMode:
       anyOf:
