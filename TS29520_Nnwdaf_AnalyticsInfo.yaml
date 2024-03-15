@@ -108,15 +108,6 @@ components:
         not:
           required: [anySlice, snssais]
     EventId:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - LOAD_LEVEL_INFORMATION
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - LOAD_LEVEL_INFORMATION: Represent the analytics of load level information of corresponding network slice.

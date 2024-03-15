@@ -469,11 +469,6 @@ components:
         - dnaiChgType
         - subscribedEvent
     SubscribedEvent:
-      anyOf:
-      - type: string
-        enum:
-          - UP_PATH_CHANGE
-      - type: string
-      description: >
-        Possible values are
-        - UP_PATH_CHANGE: The AF requests to be notified when the UP path changes for the PDU session.
+      type: string
+      enum:
+        - UP_PATH_CHANGE

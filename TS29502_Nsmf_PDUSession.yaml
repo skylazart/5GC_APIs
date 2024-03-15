@@ -2103,69 +2103,32 @@ components:
 # ENUMERATIONS
 #
     UpCnxState:
-      anyOf:
-      - type: string
-        enum:
-          - ACTIVATED
-          - DEACTIVATED
-          - ACTIVATING
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
+      type: string
+      enum:
         - ACTIVATED
         - DEACTIVATED
         - ACTIVATING
 
     HoState:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - NONE
           - PREPARING
           - PREPARED
           - COMPLETED
           - CANCELLED
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - NONE
-        - PREPARING
-        - PREPARED
-        - COMPLETED
-        - CANCELLED
 
     RequestType:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - INITIAL_REQUEST
           - EXISTING_PDU_SESSION
           - INITIAL_EMERGENCY_REQUEST
           - EXISTING_EMERGENCY_PDU_SESSION
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - INITIAL_REQUEST
-        - EXISTING_PDU_SESSION
-        - INITIAL_EMERGENCY_REQUEST
-        - EXISTING_EMERGENCY_PDU_SESSION
 
     RequestIndication:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - UE_REQ_PDU_SES_MOD
           - UE_REQ_PDU_SES_REL
           - PDU_SES_MOB
@@ -2173,45 +2136,17 @@ components:
           - NW_REQ_PDU_SES_MOD
           - NW_REQ_PDU_SES_REL
           - EBI_ASSIGNMENT_REQ
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - UE_REQ_PDU_SES_MOD
-        - UE_REQ_PDU_SES_REL
-        - PDU_SES_MOB
-        - NW_REQ_PDU_SES_AUTH
-        - NW_REQ_PDU_SES_MOD
-        - NW_REQ_PDU_SES_REL
-        - EBI_ASSIGNMENT_REQ
 
     NotificationCause:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - QOS_FULFILLED
           - QOS_NOT_FULFILLED
           - UP_SEC_FULFILLED
           - UP_SEC_NOT_FULFILLED
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - QOS_FULFILLED
-        - QOS_NOT_FULFILLED
-        - UP_SEC_FULFILLED
-        - UP_SEC_NOT_FULFILLED
-
     Cause:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - REL_DUE_TO_HO
           - EPS_FALLBACK
           - REL_DUE_TO_UP_SEC
@@ -2225,81 +2160,28 @@ components:
           - HO_FAILURE
           - INSUFFICIENT_UP_RESOURCES
           - PDU_SESSION_HANDED_OVER
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - REL_DUE_TO_HO
-        - EPS_FALLBACK
-        - REL_DUE_TO_UP_SEC
-        - DNN_CONGESTION
-        - S_NSSAI_CONGESTION
-        - REL_DUE_TO_REACTIVATION
-        - 5G_AN_NOT_RESPONDING
-        - REL_DUE_TO_SLICE_NOT_AVAILABLE
-        - REL_DUE_TO_DUPLICATE_SESSION_ID
-        - PDU_SESSION_STATUS_MISMATCH
-        - HO_FAILURE
-        - INSUFFICIENT_UP_RESOURCES
-        - PDU_SESSION_HANDED_OVER
 
     ResourceStatus:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - RELEASED
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - RELEASED
 
     DnnSelectionMode:
-      anyOf:
-      - type: string
-        enum:
-          - VERIFIED
-          - UE_DNN_NOT_VERIFIED
-          - NW_DNN_NOT_VERIFIED
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
+      type: string
+      enum:
         - VERIFIED
         - UE_DNN_NOT_VERIFIED
         - NW_DNN_NOT_VERIFIED
 
     EpsInterworkingIndication:
-      anyOf:
-      - type: string
-        enum:
-          - NONE
-          - WITH_N26
-          - WITHOUT_N26
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
+      type: string
+      enum:
         - NONE
         - WITH_N26
         - WITHOUT_N26
-
     N2SmInfoType:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - PDU_RES_SETUP_REQ
           - PDU_RES_SETUP_RSP
           - PDU_RES_SETUP_FAIL
@@ -2322,52 +2204,12 @@ components:
           - HANDOVER_REQ_ACK
           - HANDOVER_RES_ALLOC_FAIL
           - SECONDARY_RAT_USAGE
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - PDU_RES_SETUP_REQ
-        - PDU_RES_SETUP_RSP
-        - PDU_RES_SETUP_FAIL
-        - PDU_RES_REL_CMD
-        - PDU_RES_REL_RSP
-        - PDU_RES_MOD_REQ
-        - PDU_RES_MOD_RSP
-        - PDU_RES_MOD_FAIL
-        - PDU_RES_NTY
-        - PDU_RES_NTY_REL
-        - PDU_RES_MOD_IND
-        - PDU_RES_MOD_CFM
-        - PATH_SWITCH_REQ
-        - PATH_SWITCH_SETUP_FAIL
-        - PATH_SWITCH_REQ_ACK
-        - PATH_SWITCH_REQ_FAIL
-        - HANDOVER_REQUIRED
-        - HANDOVER_CMD
-        - HANDOVER_PREP_FAIL
-        - HANDOVER_REQ_ACK
-        - HANDOVER_RES_ALLOC_FAIL
-        - SECONDARY_RAT_USAGE
 
     MaxIntegrityProtectedDataRate:
-      anyOf:
-      - type: string
-        enum:
-          - 64_KBPS
-          - MAX_UE_RATE
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-          - 64_KBPS
-          - MAX_UE_RATE
-
+      type: string
+      enum:
+        - 64_KBPS
+        - MAX_UE_RATE
 
 #
 # HTTP responses

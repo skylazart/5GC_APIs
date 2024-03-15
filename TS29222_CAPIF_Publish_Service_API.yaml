@@ -380,79 +380,49 @@ components:
       required:
         - apiVersion
     Protocol:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - HTTP_1_1
           - HTTP_2
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
       description: >
         Possible values are
         - HTTP_1_1: HTTP version 1.1
         - HTTP_2: HTTP version 2
     CommunicationType:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - REQUEST_RESPONSE
           - SUBSCRIBE_NOTIFY
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
       description: >
         Possible values are
         - REQUEST_RESPONSE: The communication is of the type request-response
         - SUBSCRIBE_NOTIFY: The communication is of the type subscribe-notify
     DataFormat:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - JSON
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
       description: >
         Possible values are
         - JSON: JavaScript Object Notation
     SecurityMethod:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - PSK
           - PKI
           - OAUTH
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
       description: >
         Possible values are
         - PSK: Security method 1 (Using TLS-PSK) as described in 3GPP TS 33.122
         - PKI: Security method 2 (Using PKI) as described in 3GPP TS 33.122
         - OAUTH: Security method 3 (TLS with OAuth token) as described in 3GPP TS 33.122
     Operation:
-      anyOf:
-      - type: string
-        enum:
+      type: string
+      enum:
           - GET
           - POST
           - PUT
           - PATCH
           - DELETE
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
       description: >
         Possible values are
         - GET: HTTP GET method
