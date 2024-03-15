@@ -89,8 +89,7 @@ paths:
                   content:
                     application/json:
                       schema:
-                        $ref: >-
-                          TS29571_CommonData.yaml#/components/schemas/ProblemDetails
+                        $ref: 'TS29571_CommonData.yaml#/components/schemas/ProblemDetails'
                 default:
                   $ref: 'TS29571_CommonData.yaml#/components/responses/default'
   '/chargingdata/{ChargingDataRef}/update':
