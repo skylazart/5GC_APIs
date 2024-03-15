@@ -191,37 +191,29 @@ components:
 #
 
     PatchOperation:
-      anyOf:
-        - type: string
-          enum:
-            - add
-            - copy
-            - move
-            - remove
-            - replace
-            - test
-        - type: string
+      type: string
+      enum:
+        - add
+        - copy
+        - move
+        - remove
+        - replace
+        - test
     UriScheme:
-      anyOf:
-        - type: string
-          enum:
-            - http
-            - https
-        - type: string
+      type: string
+      enum:
+        - http
+        - https
     ChangeType:
-      anyOf:
-        - type: string
-          enum:
-            - ADD
-            - MOVE
-            - REMOVE
-            - REPLACE
-        - type: string
-
+      type: string
+      enum:
+        - ADD
+        - MOVE
+        - REMOVE
+        - REPLACE
 #
 #  COMMON STRUCTURED DATA TYPES
 #
-
     ProblemDetails:
       type: object
       properties:
@@ -569,23 +561,19 @@ components:
         - NON_3GPP_ACCESS
       nullable: true
     RatType:
-      anyOf:
-        - type: string
-          enum:
-            - NR
-            - EUTRA
-            - WLAN
-            - VIRTUAL
-        - type: string
+      type: string
+      enum:
+        - NR
+        - EUTRA
+        - WLAN
+        - VIRTUAL
     RatTypeRm:
-      anyOf:
-        - type: string
-          enum:
-            - NR
-            - EUTRA
-            - WLAN
-            - VIRTUAL
-        - type: string
+      type: string
+      enum:
+        - NR
+        - EUTRA
+        - WLAN
+        - VIRTUAL
       nullable: true
     PduSessionType:
       type: string
@@ -611,114 +599,80 @@ components:
         - PREFERRED
         - NOT_NEEDED
     UpIntegrityRm:
-      anyOf:
-        - type: string
-          enum:
-            - REQUIRED
-            - PREFERRED
-            - NOT_NEEDED
-        - type: string
+      type: string
+      enum:
+        - REQUIRED
+        - PREFERRED
+        - NOT_NEEDED
       nullable: true
     UpConfidentiality:
-      anyOf:
-        - type: string
-          enum:
-            - REQUIRED
-            - PREFERRED
-            - NOT_NEEDED
-        - type: string
+      type: string
+      enum:
+        - REQUIRED
+        - PREFERRED
+        - NOT_NEEDED
     UpConfidentialityRm:
-      anyOf:
-        - type: string
-          enum:
-            - REQUIRED
-            - PREFERRED
-            - NOT_NEEDED
-        - type: string
+      type: string
+      enum:
+        - REQUIRED
+        - PREFERRED
+        - NOT_NEEDED
       nullable: true
     SscMode:
-      anyOf:
-        - type: string
-          enum:
-            - SSC_MODE_1
-            - SSC_MODE_2
-            - SSC_MODE_3
-        - type: string
+      type: string
+      enum:
+        - SSC_MODE_1
+        - SSC_MODE_2
+        - SSC_MODE_3
     SscModeRm:
-      anyOf:
-        - type: string
-          enum:
-            - SSC_MODE_1
-            - SSC_MODE_2
-            - SSC_MODE_3
-        - type: string
+      type: string
+      enum:
+        - SSC_MODE_1
+        - SSC_MODE_2
+        - SSC_MODE_3
       nullable: true
     DnaiChangeType:
-      anyOf:
-      - type: string
-        enum:
-          - EARLY
-          - EARLY_LATE
-          - LATE
-      - type: string
-        description: >
-          This string provides forward-compatibility with future
-          extensions to the enumeration but is not used to encode
-          content defined in the present version of this API.
-      description: >
-        Possible values are
-        - EARLY: Early notification of UP path reconfiguration.
-        - EARLY_LATE: Early and late notification of UP path reconfiguration. This value shall only be present in the subscription to the DNAI change event.
-        - LATE: Late notification of UP path reconfiguration.
+      type: string
+      enum:
+        - EARLY
+        - EARLY_LATE
+        - LATE
     DnaiChangeTypeRm:
-      anyOf:
-        - type: string
-          enum:
-            - EARLY
-            - EARLY_LATE
-            - LATE
-        - type: string
+      type: string
+      enum:
+        - EARLY
+        - EARLY_LATE
+        - LATE
       nullable: true
     RestrictionType:
-      anyOf:
-        - type: string
-          enum:
-            - ALLOWED_AREAS
-            - NOT_ALLOWED_AREAS
-        - type: string
+      type: string
+      enum:
+        - ALLOWED_AREAS
+        - NOT_ALLOWED_AREAS
     RestrictionTypeRm:
-      anyOf:
-        - type: string
-          enum:
-            - ALLOWED_AREAS
-            - NOT_ALLOWED_AREAS
-        - type: string
+      type: string
+      enum:
+        - ALLOWED_AREAS
+        - NOT_ALLOWED_AREAS
       nullable: true
     CoreNetworkType:
-      anyOf:
-        - type: string
-          enum:
-            - 5GC
-            - EPC
-        - type: string
+      type: string
+      enum:
+        - 5GC
+        - EPC
     CoreNetworkTypeRm:
-      anyOf:
-        - type: string
-          enum:
-          - 5GC
-          - EPC
-        - type: string
+      type: string
+      enum:
+      - 5GC
+      - EPC
       nullable: true
     PresenceState:
-      anyOf:
-        - type: string
-          enum:
-            - IN_AREA
-            - OUT_OF_AREA
-            - UNKNOWN
-            - INACTIVE
-        - type: string
-
+      type: string
+      enum:
+        - IN_AREA
+        - OUT_OF_AREA
+        - UNKNOWN
+        - INACTIVE
 #
 # STRUCTURED DATA TYPES
 #
@@ -1291,88 +1245,67 @@ components:
 #
 
     PreemptionCapability:
-      anyOf:
-        - type: string
-          enum:
-            - NOT_PREEMPT
-            - MAY_PREEMPT
-        - type: string
+      type: string
+      enum:
+        - NOT_PREEMPT
+        - MAY_PREEMPT
     PreemptionCapabilityRm:
-      anyOf:
-        - type: string
-          enum:
-            - NOT_PREEMPT
-            - MAY_PREEMPT
-        - type: string
+      type: string
+      enum:
+        - NOT_PREEMPT
+        - MAY_PREEMPT
       nullable: true
     PreemptionVulnerability:
-      anyOf:
-        - type: string
-          enum:
-            - NOT_PREEMPTABLE
-            - PREEMPTABLE
-        - type: string
+      type: string
+      enum:
+        - NOT_PREEMPTABLE
+        - PREEMPTABLE
     PreemptionVulnerabilityRm:
-      anyOf:
-        - type: string
-          enum:
-            - NOT_PREEMPTABLE
-            - PREEMPTABLE
-        - type: string
+      type: string
+      enum:
+        - NOT_PREEMPTABLE
+        - PREEMPTABLE
       nullable: true
     ReflectiveQoSAttribute:
-      anyOf:
-        - type: string
-          enum:
-            - RQOS
-            - NO_RQOS
+      type: string
+      enum:
+        - RQOS
+        - NO_RQOS
         - type: string
     ReflectiveQoSAttributeRm:
-      anyOf:
-        - type: string
-          enum:
-            - RQOS
-            - NO_RQOS
-        - type: string
+      type: string
+      enum:
+        - RQOS
+        - NO_RQOS
       nullable: true
     NotificationControl:
-      anyOf:
-        - type: string
-          enum:
-            - REQUESTED
-            - NOT_REQUESTED
-        - type: string
+      type: string
+      enum:
+        - REQUESTED
+        - NOT_REQUESTED
     NotificationControlRm:
-      anyOf:
-        - type: string
-          enum:
-            - REQUESTED
-            - NOT_REQUESTED
-        - type: string
+      type: string
+      enum:
+        - REQUESTED
+        - NOT_REQUESTED
       nullable: true
     QosResourceType:
-      anyOf:
-        - type: string
-          enum:
-            - NON_GBR
-            - NON_CRITICAL_GBR
-            - CRITICAL_GBR
-        - type: string
+      type: string
+      enum:
+        - NON_GBR
+        - NON_CRITICAL_GBR
+        - CRITICAL_GBR
     QosResourceTypeRm:
-      anyOf:
-        - type: string
-          enum:
-            - NON_GBR
-            - NON_CRITICAL_GBR
-            - CRITICAL_GBR
-        - type: string
+      type: string
+      enum:
+        - NON_GBR
+        - NON_CRITICAL_GBR
+        - CRITICAL_GBR
       nullable: true
     AdditionalQosFlowInfo:
-      anyOf:
-        - type: string
-          enum:
-            - MORE_LIKELY
-        - type: string
+      type: string
+      enum:
+        - MORE_LIKELY
       nullable: true
 #
 
@@ -1471,27 +1404,23 @@ components:
 # Enumerations
 #
     TraceDepth:
-      anyOf:
-        - type: string
-          enum:
-            - MINIMUM
-            - MEDIUM
-            - MAXIMUM
-            - MINIMUM_WO_VENDOR_EXTENSION
-            - MEDIUM_WO_VENDOR_EXTENSION
-            - MAXIMUM_WO_VENDOR_EXTENSION
-        - type: string
+      type: string
+      enum:
+        - MINIMUM
+        - MEDIUM
+        - MAXIMUM
+        - MINIMUM_WO_VENDOR_EXTENSION
+        - MEDIUM_WO_VENDOR_EXTENSION
+        - MAXIMUM_WO_VENDOR_EXTENSION
     TraceDepthRm:
-      anyOf:
-        - type: string
-          enum:
-            - MINIMUM
-            - MEDIUM
-            - MAXIMUM
-            - MINIMUM_WO_VENDOR_EXTENSION
-            - MEDIUM_WO_VENDOR_EXTENSION
-            - MAXIMUM_WO_VENDOR_EXTENSION
-        - type: string
+      type: string
+      enum:
+        - MINIMUM
+        - MEDIUM
+        - MAXIMUM
+        - MINIMUM_WO_VENDOR_EXTENSION
+        - MEDIUM_WO_VENDOR_EXTENSION
+        - MAXIMUM_WO_VENDOR_EXTENSION
       nullable: true
 #
 # STRUCTURED DATA TYPES
@@ -1535,21 +1464,17 @@ components:
 # Enumerations
 #
     RoamingOdb:
-      anyOf:
-        - type: string
-          enum:
-            - OUTSIDE_HOME_PLMN
-            - OUTSIDE_HOME_PLMN_COUNTRY
-        - type: string
+      type: string
+      enum:
+        - OUTSIDE_HOME_PLMN
+        - OUTSIDE_HOME_PLMN_COUNTRY
 
     OdbPacketServices:
-      anyOf:
-        - type: string
-          enum:
-            - ALL_PACKET_SERVICES
-            - ROAMER_ACCESS_HPLMN_AP
-            - ROAMER_ACCESS_VPLMN_AP
-        - type: string
+      type: string
+      enum:
+        - ALL_PACKET_SERVICES
+        - ROAMER_ACCESS_HPLMN_AP
+        - ROAMER_ACCESS_VPLMN_AP
       nullable: true
 
 #
