@@ -588,34 +588,28 @@ components:
         - type: string
       nullable: true
     PduSessionType:
-      anyOf:
-        - type: string
-          enum:
-            - IPV4
-            - IPV6
-            - IPV4V6
-            - UNSTRUCTURED
-            - ETHERNET
-        - type: string
+      type: string
+      enum:
+        - IPV4
+        - IPV6
+        - IPV4V6
+        - UNSTRUCTURED
+        - ETHERNET
     PduSessionTypeRm:
-      anyOf:
-        - type: string
-          enum:
-            - IPV4
-            - IPV6
-            - IPV4V6
-            - UNSTRUCTURED
-            - ETHERNET
-        - type: string
+      type: string
+      enum:
+        - IPV4
+        - IPV6
+        - IPV4V6
+        - UNSTRUCTURED
+        - ETHERNET
       nullable: true
     UpIntegrity:
-      anyOf:
-        - type: string
-          enum:
-            - REQUIRED
-            - PREFERRED
-            - NOT_NEEDED
-        - type: string
+      type: string
+      enum:
+        - REQUIRED
+        - PREFERRED
+        - NOT_NEEDED
     UpIntegrityRm:
       anyOf:
         - type: string
