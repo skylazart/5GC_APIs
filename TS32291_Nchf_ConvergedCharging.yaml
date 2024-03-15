@@ -17,7 +17,7 @@ servers:
         default: https://example.com
         description: apiRoot as defined in subclause 4.4 of 3GPP TS 29.501.
 paths:
-  /chargingdata:
+  '/chargingdata/{ChargingDataRef}':
     post:
       requestBody:
         required: true
@@ -25,6 +25,13 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChargingDataRequest'
+      parameters:
+        - name: ChargingDataRef
+          in: path
+          description: a unique identifier for a charging data resource in a PLMN
+          required: true
+          schema:
+            type: string
       responses:
         '201':
           description: Created
