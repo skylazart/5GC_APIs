@@ -839,12 +839,13 @@ components:
             - ABORT_CHARGING
         - type: string
     NodeFunctionality:
-      allOf:
+      anyOf:
         - type: string
           enum:
             - AMF
             - SMF
             - SMSF
+        - type: string
     ChargingCharacteristicsSelectionMode:
       anyOf:
         - type: string
