@@ -832,12 +832,10 @@ components:
         downlinkVolume:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/Uint64'
     NotificationType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - REAUTHORIZATION
             - ABORT_CHARGING
-        - type: string
     NodeFunctionality:
       type: string
       enum:
@@ -863,17 +861,14 @@ components:
         - UDM
         - UPF
     ChargingCharacteristicsSelectionMode:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - HOME_DEFAULT
             - ROAMING_DEFAULT
             - VISITING_DEFAULT
-        - type: string
     TriggerType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - QUOTA_THRESHOLD
             - QHT
             - FINAL
@@ -902,63 +897,47 @@ components:
             - ADDITION_OF_UPF
             - START_OF_SERVICE_DATA_FLOW
             - GFBR_GUARANTEED_STATUS_CHANGE
-        - type: string
     FinalUnitAction:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - TERMINATE
             - REDIRECT
             - RESTRICT_ACCESS
-        - type: string
     RedirectAddressType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - IPV4
             - IPV6
             - URL
-        - type: string
     TriggerCategory:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - IMMEDIATE_REPORT
             - DEFERRED_REPORT
-        - type: string
     QuotaManagementIndicator:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - ONLINE_CHARGING
             - OFFLINE_CHARGING
-        - type: string
     FailureHandling:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - TERMINATE
             - CONTINUE
             - RETRY_AND_TERMINATE
-        - type: string
     SessionFailover:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - FAILOVER_NOT_SUPPORTED
             - FAILOVER_SUPPORTED
-        - type: string
     3GPPPSDataOffStatus:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - ACTIVE
             - INACTIVE
-        - type: string
     ResultCode:
-      anyOf:
-        - type: string
-          enum: 
+      type: string
+      enum:
             - SUCCESS
             - END_USER_SERVICE_DENIED
             - QUOTA_MANAGEMENT_NOT_APPLICABLE
@@ -966,68 +945,52 @@ components:
             - END_USER_SERVICE_REJECTED
             - USER_UNKNOWN
             - RATING_FAILED
-        - type: string
     PartialRecordMethod:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - DEFAULT
             - INDIVIDUAL
-        - type: string
     RoamerInOut:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - IN_BOUND
             - OUT_BOUND
-        - type: string
     SMMessageType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - SUBMISSION
             - DELIVERY_REPORT
             - SM_SERVICE_REQUEST
             - DELIVERY
-        - type: string
     SMPriority:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - LOW
             - NORMAL
             - HIGH
-        - type: string
     DeliveryReportRequested:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - YES
             - NO
-        - type: string
     InterfaceType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - UNKNOWN
             - MOBILE_ORIGINATING
             - MOBILE_TERMINATING
             - APPLICATION_ORIGINATING
             - APPLICATION_TERMINATING
-        - type: string
     ClassIdentifier:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - PERSONAL
             - ADVERTISEMENT
             - INFORMATIONAL
             - AUTO
-        - type: string
     SMAddressType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - EMAIL_ADDRESS
             - MSISDN
             - IPV4_ADDRESS
@@ -1036,19 +999,15 @@ components:
             - ALPHANUMERIC_SHORTCODE
             - OTHER
             - IMSI
-        - type: string
     SMAddresseeType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - TO
             - CC
             - BCC
-        - type: string
     SMServiceType:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - VAS4SMS_SHORT_MESSAGE_CONTENT_PROCESSING
             - VAS4SMS_SHORT_MESSAGE_FORWARDING
             - VAS4SMS_SHORT_MESSAGE_FORWARDING_MULTIPLE_SUBSCRIPTIONS
@@ -1060,26 +1019,19 @@ components:
             - VAS4SMS_SHORT_MESSAGE_AUTO_REPLY
             - VAS4SMS_SHORT_MESSAGE_PERSONAL_SIGNATURE
             - VAS4SMS_SHORT_MESSAGE_DEFERRED_DELIVERY
-        - type: string
     ReplyPathRequested:
-      anyOf:
-        - type: string
-          enum:
+      type: string
+      enum:
             - NO_REPLY_PATH_SET
             - REPLY_PATH_SET
-        - type: string
     oneTimeEventType:
-      anyOf:
-        - type: string
-          enum:
-            - IEC
-            - PEC
-        - type: string
+      type: string
+      enum:
+        - IEC
+        - PEC
     dnnSelectionMode:
-      anyOf:
-        - type: string
-          enum:
+        type: string
+        enum:
             - VERIFIED
             - UE_DNN_NOT_VERIFIED
             - NW_DNN_NOT_VERIFIED
-        - type: string
