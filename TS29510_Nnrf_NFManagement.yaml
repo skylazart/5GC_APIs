@@ -726,31 +726,29 @@ components:
         supportedFeatures:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/SupportedFeatures'
     NFType:
-      anyOf:
-        - type: string
-          enum:
-            - NRF
-            - UDM
-            - AMF
-            - SMF
-            - AUSF
-            - NEF
-            - PCF
-            - SMSF
-            - NSSF
-            - UDR
-            - LMF
-            - GMLC
-            - 5G_EIR
-            - SEPP
-            - UPF
-            - N3IWF
-            - AF
-            - UDSF
-            - BSF
-            - CHF
-            - NWDAF
-        - type: string
+      type: string
+      enum:
+        - NRF
+        - UDM
+        - AMF
+        - SMF
+        - AUSF
+        - NEF
+        - PCF
+        - SMSF
+        - NSSF
+        - UDR
+        - LMF
+        - GMLC
+        - 5G_EIR
+        - SEPP
+        - UPF
+        - N3IWF
+        - AF
+        - UDSF
+        - BSF
+        - CHF
+        - NWDAF
     Fqdn:
       type: string
     IpEndPoint:

@@ -262,12 +262,10 @@ components:
         - op
         - path
     LinksValueSchema:
-      oneOf:
-        - type: array
-          items:
-            $ref: '#/components/schemas/Link'
-          minItems: 1
-        - $ref: '#/components/schemas/Link'
+      type: array
+      items:
+        $ref: '#/components/schemas/Link'
+      minItems: 1
     SelfLink:
       type: object
       properties:
