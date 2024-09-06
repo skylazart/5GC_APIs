@@ -537,6 +537,8 @@ components:
           $ref: '#/components/schemas/NFType'
         nfStatus:
           $ref: '#/components/schemas/NFStatus'
+        capabilities:
+          $ref: '#/components/schemas/Capabilities'
         heartBeatTimer:
           type: integer
         plmnList:
@@ -749,6 +751,21 @@ components:
         - BSF
         - CHF
         - NWDAF
+    Capabilities:
+      type: object
+      properties:
+        areaCodeSubscription:
+          type: array
+          items:
+            $ref: '#/components/schemas/AreaCode'
+        msisdnSubscription:
+          type: array
+          items:
+            $ref: '#/components/schemas/MSISDN'
+    AreaCode:
+      type: string
+    MSISDN:
+      type: string
     Fqdn:
       type: string
     IpEndPoint:
